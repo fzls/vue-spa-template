@@ -25,13 +25,13 @@ import {
 const state = {
   added: [],
   lastCheckout: null
-}
+};
 
 // mutations
 const mutations = {
   [ADD_TO_CART] (state, productId) {
-    state.lastCheckout = null
-    const record = state.added.find(p => p.id === productId)
+    state.lastCheckout = null;
+    const record = state.added.find(p => p.id === productId);
     if (!record) {
       state.added.push({
         id: productId,
@@ -44,7 +44,7 @@ const mutations = {
 
   [CHECKOUT_REQUEST] (state) {
     // clear cart
-    state.added = []
+    state.added = [];
     state.lastCheckout = null
   },
 
@@ -54,10 +54,10 @@ const mutations = {
 
   [CHECKOUT_FAILURE] (state, savedCartItems) {
     // rollback to the cart saved before sending the request
-    state.added = savedCartItems
+    state.added = savedCartItems;
     state.lastCheckout = 'failed'
   }
-}
+};
 
 export default {
   state,

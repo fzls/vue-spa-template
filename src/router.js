@@ -6,10 +6,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 var router = new VueRouter({
   history: false
-})
+});
 
 router.map({
   // step 2: add routes here
@@ -20,6 +20,6 @@ router.map({
   //   name: 'product',
   //   component: ProductPage
   // },
-})
+});
 
 export default router

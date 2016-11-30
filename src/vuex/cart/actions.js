@@ -14,8 +14,8 @@ import * as types from '../mutation-types'
 // dispatch function, which applies a mutation to the store,
 // and the current state of the store
 export const checkout = ({ dispatch, state }, products) => {
-  const savedCartItems = [...state.cart.added]
-  dispatch(types.CHECKOUT_REQUEST) // call mutation on corresponding state
+  const savedCartItems = [...state.cart.added];
+  dispatch(types.CHECKOUT_REQUEST); // call mutation on corresponding state
   // Call our fake shop API, re: call api
   shop.buyProducts(
     products,
@@ -24,4 +24,4 @@ export const checkout = ({ dispatch, state }, products) => {
     // Callback function which dispatches CHECKOUT_FAILURE
     () => dispatch(types.CHECKOUT_FAILURE, savedCartItems)
   )
-}
+};

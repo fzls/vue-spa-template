@@ -3,6 +3,6 @@ import router from './router'
 import store from './vuex/store' // vuex store instance
 import { sync } from 'vuex-router-sync'
 
-sync(store, router)
+sync(store, router);
 
-router.start(App, '#app')
+router.start(App, '#app');

@@ -14,22 +14,22 @@
 // step 5 add getters
 export const cartProducts = state => {
   return state.cart.added.map(({ id, quantity }) => {
-    const product = state.products.all.find(p => p.id === id)
+    const product = state.products.all.find(p => p.id === id);
     return {
       title: product.title,
       price: product.price,
       quantity
     }
   })
-}
+};
 
 // This creates a total sum of all the items in the cart. This is an example
 // of how a getter can return a scalar value which can be re-used in views
 export const cartCount = state => {
-  var totalCount = 0
+  var totalCount = 0;
   state.cart.added.forEach(({ quantity }) => {
     totalCount += quantity
-  })
+  });
 
   return totalCount
-}
+};
