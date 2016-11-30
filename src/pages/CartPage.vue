@@ -34,7 +34,6 @@
 
 <script>
   // step 3 : after define route, define page like this in here, add corresponding actions and getters in vuex directory
-  <!-- TODO: this is only a demo, define all your pages in this directory-->
   import { checkout } from '../vuex/cart/actions'
   import { cartProducts } from '../vuex/cart/getters'
 

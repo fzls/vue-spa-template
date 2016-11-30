@@ -6,7 +6,7 @@
 </template>
 
 <script>
-<!--TODO: define all components(which is not a single page) in here-->
+// TODO: define all components(which is not a single page) in here
 import { cartCount } from '../vuex/cart/getters'
 export default {
   vuex: {
